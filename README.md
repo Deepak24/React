@@ -1,2 +1,2 @@
 # React
-React Project - Practicing the react
+React Project - This is practice project.
