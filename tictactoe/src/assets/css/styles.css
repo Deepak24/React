@@ -1,4 +1,12 @@
 
+ul {
+    padding-inline-start: 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
+  
 .square {
     background: #fff;
     border: 1px solid #999;
@@ -20,3 +28,16 @@
     content: '';
     display: table;
 }
+
+.status {
+    margin-bottom: 10px;
+}
+.game {
+    display: flex;
+    flex-direction: row;
+}
+
+.game-info {
+    margin-left: 20px;
+}
+  

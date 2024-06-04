@@ -1,5 +1,4 @@
-// import { useState } from "react";
-
+//
 function Square({ value, onSquareClick }) {
     // const [value, setValue] = useState(null);
 

@@ -51,6 +51,7 @@ export default function Board( {xIsNext, squares, onPlay} ) {
     )
 }
 
+//Calculate the winner of tictactoe 
 function calculateWinner(squares) {
     const lines = [
         [0, 1, 2],

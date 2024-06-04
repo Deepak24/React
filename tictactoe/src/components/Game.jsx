@@ -2,7 +2,6 @@ import { useState } from 'react';
 import Board from "./Board";
 // import Square from "./Square";
 
-
 export default function Game() {
     // const [xIsNext, setXIsNext] = useState(true);
     const [history, setHistory] = useState([Array(9).fill(null)]);
@@ -27,6 +26,7 @@ export default function Game() {
         // setXIsNext(nextMove % 2 == 0);
     }
 
+    //storing the history of moves
     const moves = history.map((squares, move) => {
         let description;
         if(move > 0) {
