@@ -1,3 +1,9 @@
 h1 {
     font-size: 16px;
 }
+.padd8 {
+    padding: 8px;
+}
+.bgColor {
+    background-color: gray;
+}
