@@ -6,7 +6,8 @@ import Header from "./components/Header";
 import Products from "./components/Products";
 import IncrementButton from "./components/IncrementButton";
 import DecrementButton from "./components/DecrementButton";
-import ObjectUpdateWithuseState from './components/ObjectUpdateWithUseState';
+import ObjectUdateWithuseState from "./components/ObjectUpdateWithUseState";
+import BrandFilter from "./components/BrandFilter";
 
 const isLoading = false;
 
@@ -42,7 +43,9 @@ function App() {
             }
 
             <Products />
-            <ObjectUpdateWithuseState />
+            <BrandFilter />
+            
+            <ObjectUdateWithuseState />
             <br />
             <input type="text" onChange={onSearchChange} placeholder='Search...' />
             <br />
