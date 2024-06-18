@@ -1,22 +1,24 @@
 import { useState } from "react";
 
 const allBrands = [
-    {id: "1", brandName: "Puma"},
-    {id: "2", brandName: "Addidas"},
-    {id: "3", brandName: "Nike"},
-    {id: "4", brandName: "Reebok"},
-    {id: "5", brandName: "Fila"}
+    {id: "1", brandName: "puma"},
+    {id: "2", brandName: "addidas"},
+    {id: "3", brandName: "nike"},
+    {id: "4", brandName: "reebok"},
+    {id: "5", brandName: "fila"}
 ];
 
 const BrandFilter = () => {
-
-    const [search, setSearch] = useState();
+    // const [search, setSearch] = useState();
     const [brands, setBrands] = useState(allBrands);
 
     const onSearchChange = (e) => {
-        setSearch(e.target.value);
-        const filteredBrands = brands.filter(brand => brand.brandName.includes(search?.toLowerCase()));
-        console.log(filteredBrands)
+        const value = e.target.value;
+        // setSearch(e.target.value);
+        const filteredBrands = (value?.length > 0) ? 
+                                    brands.filter(brand => brand.brandName.includes(value.toLowerCase())) : 
+                                    allBrands;
+        console.log(filteredBrands);
         setBrands(filteredBrands);
     }
 
@@ -25,7 +27,7 @@ const BrandFilter = () => {
             <input onChange={onSearchChange} placeholder="Search a Brand" />
             <ul>
                 {
-                    brands.map(brand => <li key={brand.id}>{brand.brandName}</li>)
+                    brands.map((brand) => <li key={brand.id}>{brand.brandName}</li>)
                 }
             </ul>
         </>
