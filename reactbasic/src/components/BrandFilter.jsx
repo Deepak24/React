@@ -11,6 +11,7 @@ const allBrands = [
 const BrandFilter = () => {
     // const [search, setSearch] = useState();
     const [brands, setBrands] = useState(allBrands);
+    const [selectedBrand, setSelectedBrands] = useState([]);
 
     const onSearchChange = (e) => {
         const value = e.target.value;
@@ -22,14 +23,35 @@ const BrandFilter = () => {
         setBrands(filteredBrands);
     }
 
+    const onAddToCartClick = (id) => {
+        const selectedItem = allBrands.find(item => item.id === id);
+        setSelectedBrands([...selectedBrand, selectedItem]);
+    }
+
+    const  onRemoveClick = (id) => {
+         
+    }
+
     return (
         <>
             <input onChange={onSearchChange} placeholder="Search a Brand" />
             <ul>
                 {
-                    brands.map((brand) => <li key={brand.id}>{brand.brandName}</li>)
+                    brands.map((brand) => 
+                        <li key={brand.id}>
+                            {brand.brandName}
+                            <button onClick={() => onAddToCartClick(brand.id) }>Add To Cart</button>
+                        </li>)
                 }
             </ul>
+
+            <div >
+                <p>Your Cart</p>
+                {
+                    selectedBrand && selectedBrand.map(brand => 
+                    <p key={brand.id}> {brand.brandName} - <button onClick={onRemoveClick}></button></p>)
+                }
+            </div>
         </>
         
     );
