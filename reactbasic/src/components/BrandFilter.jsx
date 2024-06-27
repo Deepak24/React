@@ -41,7 +41,8 @@ const BrandFilter = () => {
                         <li key={brand.id}>
                             {brand.brandName}
                             <button onClick={() => onAddToCartClick(brand.id) }>Add To Cart</button>
-                        </li>)
+                        </li>
+                    )
                 }
             </ul>
 

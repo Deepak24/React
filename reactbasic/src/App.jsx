@@ -6,7 +6,7 @@ import Header from "./components/Header";
 import Products from "./components/Products";
 import IncrementButton from "./components/IncrementButton";
 import DecrementButton from "./components/DecrementButton";
-import ObjectUdateWithuseState from "./components/ObjectUpdateWithUseState";
+import ObjectUdateWithuseState from "./components/ObjectUpdateWithUseState1";
 import BrandFilter from "./components/BrandFilter";
 
 const isLoading = false;
@@ -18,8 +18,6 @@ function Loader() {
 }
 
 function App() {
-
-    
 
     const [count, setCount] = useState(0);
 
@@ -34,7 +32,7 @@ function App() {
             
             <div >
                 <div >Increment and Decrement </div>
-                <IncrementButton count={count} setCount={setCount} name="Deepak" />
+                <IncrementButton count={count} setCount={setCount} name="Increse" />
                 <span className=''>counter components value : {count}</span>
                 <DecrementButton count ={count} setCount={setCount} name="Decrease" />
             </div>
